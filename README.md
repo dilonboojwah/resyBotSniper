@@ -91,30 +91,38 @@ Once the bot successfully makes a reservation it will:
 
 ## Project Structure
 
-resybotsniper/  
-├── utils/  
-│   ├── playwrightHelper.js  
-│   ├── sendNotification.js  
-│   ├── dbHelper.js  
-├── example.env  
-├── .gitignore  
-├── index.js  
-├── package.json  
-├── package-lock.json  
-└── README.md  
+resybotsniper/
+├── README.md
+├── LICENSE
+├── index.js
+├── .gitignore
+├── adminFiles/
+│   ├── example.env
+│   ├── monitorReservations.png
+│   ├── package.json
+│   ├── package-lock.json
+│   └── resyRezdora.png
+├── utils/
+│   ├── dbHelper.js
+│   ├── playwrightHelper.js
+│   └── sendNotification.js
 
-| File / Folder             | Description                                         |
-|---------------------------|-----------------------------------------------------|
-| utils/                    | contains utility scripts                            |
-| playwrightHelper.js       | handles Playwright automation and Resy login        |
-| sendNotification.js       | manages email notifications via SendGrid            |
-| dbHelper.js               | handles MongoDB database operations                 |
-| example.env               | example environment variables                       |
-| .gitignore                | specifies files to exclude from GitHub              |
-| index.js                  | main entry point for the bot                        |
-| package.json              | project metadata and dependencies                   |
-| package-lock.json         | dependency tree lock file                           |
-| README.md                 | project documentation                               |
+| File / Folder                 | Description                                         |
+|-------------------------------|-----------------------------------------------------|
+| README.md                     | project documentation                               |
+| LICENSE                       | project license                                     |
+| index.js                      | main entry point for the bot                        |
+| .gitignore                    | specificies files to exclude from GitHub            |
+| adminFiles/                   | contains configuration and resource files           |
+| example.env                   | example environment variables                       |
+| monitorReservations.png       | screenshot of the monitorReservations function      |
+| package.json                  | project metadata and dependencies                   |
+| package-lock.json             | dependency tree lock file                           |
+| resyRezdora.png               | screenshot of a reservation at Rezdora              |
+| utils/                        | contains utility scripts                            |
+| dbHelper.js                   | handles MongoDB database operations                 |
+| playwrightHelper.js           | handles Playwright automation and Resy login        |
+| sendNotification.js           | manages email notifications via SendGrid            |
 
 ![monitorReservations function example](adminFiles/monitorReservations.png)
 *Code snippet for where the actual reservation takes place*
