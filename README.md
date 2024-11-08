@@ -1,6 +1,6 @@
 # Resy Bot Sniper
 
-An automated reservation bot that secures table bookings on Resy given user: venue/date/time/party size. This project demonstrates automation in website navigation using Playwright and Node.js.
+An automated reservation bot that secures table bookings on Resy based on user inputs: venue/date/time/party size. This project demonstrates automation in website navigation using Playwright and Node.js.
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
@@ -30,7 +30,7 @@ Built with Playwright for automation, SendGrid for email notifications, and Mong
 
 *Sendgrid emails are not fully necessary as Resy will send you a confirmation email. This was purely for me to practice email API integrations.
 
-*MongoDB is used to store successful reservations, failed attempts, and user preferences over time. This can then be analyzed for reservation success rates, commonly booked time slots, and user behavior. It'll also log errors during eecution to identify recurring performance bottlenecks and also make debugging easier.
+*MongoDB is used to store successful reservations, failed attempts, and user preferences over time. This can then be analyzed for reservation success rates, commonly booked time slots, and user behavior. It'll also log errors during eecution to identify recurring performance bottlenecks and also make debugging easier. 
 While this MongoDB integration isn't mandatory, it lays the groundwork for a scalable system with the potential for a user UI dashboard where more features are included: typing inputs without complex setup instructions, see insights on personal favorite restaurants and most probable availabilities, and manage preferences.
 
 ## Setup Instructions
@@ -40,11 +40,13 @@ While this MongoDB integration isn't mandatory, it lays the groundwork for a sca
 ```bash
 git clone https://github.com/yourusername/resybotsniper.git
 cd resybotsniper
+```
 
 ### 2. **Install Dependencies**
 
 ```bash
 npm install
+```
 
 ### 3. **Set Up Environment Variables**
 
@@ -68,14 +70,14 @@ To start the bot and attempt a reservation, use the following command:
 
 ```bash
 node index.js <restaurantUrl> <reservationDate> <reservationTime> <partySize>
-
+```
 Replace <restaurantUrl>, <reservationDate>, <reservationTime>, and <partySize> with your actual reservation details.
 
 ### Example:
 
 ```bash
 node index.js "https://resy.com/cities/new-york-ny/venues/rezdora" "November 14, 2024" "1930" "2"
-
+```
 ### Automated Emails & Data Storage
 
 Once the bot successfully makes a reservation it will:
