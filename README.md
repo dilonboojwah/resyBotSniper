@@ -21,6 +21,9 @@ This bot helps users get reservations on Resy by:
 
 Built with Playwright for automation, SendGrid for email notifications, and MongoDB for data storage.
 
+![Resy Rezdora interface example](./resyRezdora.png)
+Example restaurant where the bot will navigate and make a reservation
+
 ## Features
 
 - **Automated Reservation Selection**: chooses specified date, time, and party size on Resy.
@@ -112,3 +115,6 @@ resybotsniper/
 | package.json              | project metadata and dependencies                   |
 | package-lock.json         | dependency tree lock file                           |
 | README.md                 | project documentation                               |
+
+![monitorReservations function example](./monitorReservations.png)
+Code snipper for where the actual reservation takes place
