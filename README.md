@@ -23,14 +23,14 @@ Built with Playwright for automation, SendGrid for email notifications, and Mong
 
 ## Features
 
-- **Automated Reservation Selection**: Chooses specified date, time, and party size on Resy.
-- **Retry Mechanism**: Continues attempting to make a reservation if no slots are available.
-- **Email Notifications**: Sends a confirmation email for successful reservations.
-- **Data Storage**: Saves reservation data in MongoDB for reference.
+- **Automated Reservation Selection**: chooses specified date, time, and party size on Resy.
+- **Retry Mechanism**: continues attempting to make a reservation if no slots are available.
+- **Email Notifications**: sends a confirmation email for successful reservations.
+- **Data Storage**: saves reservation data in MongoDB for reference.
 
 *Sendgrid emails are not fully necessary as Resy will send you a confirmation email. This was purely for me to practice email API integrations.
 
-*MongoDB is used to store successful reservations, failed attempts, and user preferences over time. This can then be analyzed for reservation success rates, commonly booked time slots, and user behavior. It'll also log errors during eecution to identify recurring performance bottlenecks and also make debugging easier. 
+*MongoDB is used to store successful reservations, failed attempts, and user preferences over time. This can be analyzed for success rates, commonly booked time slots, and user behavior (it'll also log errors during execution to identify recurring performance bottlenecks and also make debugging easier). 
 While this MongoDB integration isn't mandatory, it lays the groundwork for a scalable system with the potential for a user UI dashboard where more features are included: typing inputs without complex setup instructions, see insights on personal favorite restaurants and most probable availabilities, and manage preferences.
 
 ## Setup Instructions
@@ -38,9 +38,10 @@ While this MongoDB integration isn't mandatory, it lays the groundwork for a sca
 ### 1. **Clone the Repository**
 
 ```bash
-git clone https://github.com/yourusername/resybotsniper.git
+git clone https://github.com/YOURUSERNAME/resybotsniper.git
 cd resybotsniper
 ```
+*use your github username in place of YOURUSERNAME*
 
 ### 2. **Install Dependencies**
 
@@ -81,8 +82,8 @@ node index.js "https://resy.com/cities/new-york-ny/venues/rezdora" "November 14,
 ### Automated Emails & Data Storage
 
 Once the bot successfully makes a reservation it will:
-- Sends a confirmation email to the specified email using SendGrid.
-- Store the reservation details in MongoDB for tracking.
+- Sends a confirmation email to your email using SendGrid
+- Store the reservation details in MongoDB
 
 
 ## Project Structure
