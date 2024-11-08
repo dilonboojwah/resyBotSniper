@@ -1,6 +1,6 @@
 const { launchBrowser, loginToResy, monitorReservations } = require('./utils/playwrightHelper');
 const { sendEmailNotification } = require('./utils/sendNotification');
-const { connectDB, saveReservation } = require('./utils/dbHelper');
+const { connectDB, saveReservation, logError } = require('./utils/dbHelper');
 
 (async () => {
     // Accept user inputs from command-line arguments
@@ -18,19 +18,25 @@ const { connectDB, saveReservation } = require('./utils/dbHelper');
     try {
         await loginToResy(page);
         const reservationMade = await monitorReservations(page, restaurantUrl, reservationDate, reservationTime, partySize);
+
+        // Extract restaurant name from the URL
+        const urlParts = new URL(restaurantUrl).pathname.split('/');
+        const restaurantName = urlParts[urlParts.length - 1].replace(/-/g, ' ');
+
         if (reservationMade) {
-            const message = `You got the table for ${partySize} at ${restaurantUrl} on ${reservationDate} at ${reservationTime}.`;
-            await sendEmailNotification(message); // Pass the message dynamically
-            await saveReservation({ restaurantUrl, reservationDate, reservationTime, partySize, date: new Date() });
+            const message = `You got the table for ${partySize} at ${restaurantName} on ${reservationDate} at ${reservationTime}.`;
+            await sendEmailNotification(message);
+            await saveReservation({ restaurantName, restaurantUrl, reservationDate, reservationTime, partySize, timestamp: new Date() });
         }
     } catch (error) {
         console.error('Error:', error);
-        await sendEmailNotification(`Error: ${error.message}`);
+        const errorMessage = `Reservation for ${restaurantName} not made :(`;
+        await sendEmailNotification(`errorMessage`);
+        await logError({ restaurantName, restaurantUrl, reservationDate, reservationTime, partySize, timestamp: new Date() });
     } finally {
         await browser.close();
     }
 })();
-
 
 // example input into terminal:
 // node index.js "https://resy.com/cities/new-york-ny/venues/upland" "November 14, 2024" "1930" "2"

@@ -10,9 +10,6 @@ async function launchBrowser() {
 
 module.exports = { launchBrowser };
 
-const { sendEmailNotification } = require('./utils/sendNotification');
-const { connectDB, saveReservation } = require('./utils/dbHelper');
-
 async function loginToResy(page) {
     await page.goto('https://resy.com/');
     await page.click('button[data-test-id="menu_container-button-log_in"]'); // Clicks the "Log In" button
@@ -23,7 +20,7 @@ async function loginToResy(page) {
     await page.waitForTimeout(3000);
 }
 
-module.exports = { launchBrowser, loginToResy };
+module.exports = { loginToResy };
 
 const { sendEmailNotification } = require('./utils/sendNotification');
 const { connectDB, saveReservation } = require('./utils/dbHelper');
