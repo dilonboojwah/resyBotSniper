@@ -88,14 +88,27 @@ Once the bot successfully makes a reservation it will:
 
 ## Project Structure
 
-resybotsniper/
-├── utils/
-│   ├── playwrightHelper.js     # Handles Playwright automation and Resy login
-│   ├── sendNotification.js     # Manages email notifications via SendGrid
-│   ├── dbHelper.js             # Handles MongoDB database operations
-├── example.env                 # Example environment variables
-├── .gitignore                  # Specifies files to exclude from GitHub
-├── index.js                    # Main entry point for the bot
-├── package.json                # Project metadata and dependencies
-├── package-lock.json           # Dependency tree lock file
-└── README.md                   # Project documentation
+resybotsniper/  
+├── utils/  
+│   ├── playwrightHelper.js  
+│   ├── sendNotification.js  
+│   ├── dbHelper.js  
+├── example.env  
+├── .gitignore  
+├── index.js  
+├── package.json  
+├── package-lock.json  
+└── README.md  
+
+| File / Folder             | Description                                         |
+|---------------------------|-----------------------------------------------------|
+| utils/                    | contains utility scripts                            |
+| playwrightHelper.js       | handles Playwright automation and Resy login        |
+| sendNotification.js       | manages email notifications via SendGrid            |
+| dbHelper.js               | handles MongoDB database operations                 |
+| example.env               | example environment variables                       |
+| .gitignore                | specifies files to exclude from GitHub              |
+| index.js                  | main entry point for the bot                        |
+| package.json              | project metadata and dependencies                   |
+| package-lock.json         | dependency tree lock file                           |
+| README.md                 | project documentation                               |
