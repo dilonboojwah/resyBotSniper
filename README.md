@@ -19,10 +19,10 @@ This bot helps users get reservations on Resy by:
 - Sending an email notification via Sendgrid to confirm successful reservations.
 - Storing reservation data in MongoDB for tracking.
 
-Built with Playwright for automation, SendGrid for email notifications, and MongoDB for data storage.
+Built with Playwright for automation, SendGrid for email notifications, and MongoDB for data storage.  
 
 ![Resy Rezdora interface example](./resyRezdora.png)
-Example restaurant where the bot will navigate and make a reservation
+*Example restaurant where the bot will navigate and make a reservation*
 
 ## Features
 
@@ -117,4 +117,4 @@ resybotsniper/
 | README.md                 | project documentation                               |
 
 ![monitorReservations function example](./monitorReservations.png)
-Code snipper for where the actual reservation takes place
+*Code snippet for where the actual reservation takes place*
