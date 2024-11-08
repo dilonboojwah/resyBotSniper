@@ -90,14 +90,12 @@ Once the bot successfully makes a reservation it will:
 
 resybotsniper/
 ├── utils/
-│   ├── playwrightHelper.js  # Handles Playwright automation and Resy login
-│   ├── sendNotification.js  # Manages email notifications via SendGrid
-│   ├── dbHelper.js          # Handles MongoDB database operations
-├── example.env              # Example environment variables
-├── .gitignore               # Specifies files to exclude from GitHub
-├── index.js                 # Main entry point for the bot
-├── package.json             # Project metadata and dependencies
-├── package-lock.json        # Dependency tree lock file
-└── README.md                # Project documentation
-
-
+│   ├── playwrightHelper.js     # Handles Playwright automation and Resy login
+│   ├── sendNotification.js     # Manages email notifications via SendGrid
+│   ├── dbHelper.js             # Handles MongoDB database operations
+├── example.env                 # Example environment variables
+├── .gitignore                  # Specifies files to exclude from GitHub
+├── index.js                    # Main entry point for the bot
+├── package.json                # Project metadata and dependencies
+├── package-lock.json           # Dependency tree lock file
+└── README.md                   # Project documentation
