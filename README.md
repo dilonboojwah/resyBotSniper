@@ -24,6 +24,9 @@ Built with Playwright for automation, SendGrid for email notifications, and Mong
 ![Resy Rezdora interface example](adminFiles/resyRezdora.png)
 *Example restaurant where the bot will navigate and make a reservation*
 
+![monitorReservations function example](adminFiles/monitorReservations.png)
+*Code snippet demonstrating the automated reservation logic*
+
 ## Features
 
 - **Automated Reservation Selection**: chooses specified date, time, and party size on Resy.
@@ -87,9 +90,6 @@ node index.js "https://resy.com/cities/new-york-ny/venues/rezdora" "November 14,
 Once the bot successfully makes a reservation it will:
 - Sends a confirmation email to your email using SendGrid
 - Store the reservation details in MongoDB
-
-![monitorReservations function example](adminFiles/monitorReservations.png)
-*Code snippet for where the actual reservation takes place*
 
 ## Project Structure
 
