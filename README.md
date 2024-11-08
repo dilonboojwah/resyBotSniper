@@ -88,24 +88,26 @@ Once the bot successfully makes a reservation it will:
 - Sends a confirmation email to your email using SendGrid
 - Store the reservation details in MongoDB
 
+![monitorReservations function example](adminFiles/monitorReservations.png)
+*Code snippet for where the actual reservation takes place*
 
 ## Project Structure
 
-resybotsniper/
-├── README.md
-├── LICENSE
-├── index.js
-├── .gitignore
-├── adminFiles/
-│   ├── example.env
-│   ├── monitorReservations.png
-│   ├── package.json
-│   ├── package-lock.json
-│   └── resyRezdora.png
-├── utils/
-│   ├── dbHelper.js
-│   ├── playwrightHelper.js
-│   └── sendNotification.js
+resybotsniper/  
+├── README.md  
+├── LICENSE  
+├── index.js  
+├── .gitignore  
+├── adminFiles/  
+│   ├── example.env  
+│   ├── monitorReservations.png  
+│   ├── package.json  
+│   ├── package-lock.json  
+│   └── resyRezdora.png  
+├── utils/  
+│   ├── dbHelper.js  
+│   ├── playwrightHelper.js  
+│   └── sendNotification.js  
 
 | File / Folder                 | Description                                         |
 |-------------------------------|-----------------------------------------------------|
@@ -123,6 +125,3 @@ resybotsniper/
 | dbHelper.js                   | handles MongoDB database operations                 |
 | playwrightHelper.js           | handles Playwright automation and Resy login        |
 | sendNotification.js           | manages email notifications via SendGrid            |
-
-![monitorReservations function example](adminFiles/monitorReservations.png)
-*Code snippet for where the actual reservation takes place*
